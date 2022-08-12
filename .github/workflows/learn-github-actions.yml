@@ -79,10 +79,10 @@ jobs:
       - name: Print env
         run: echo ${{ env.myNull }}, ${{ env.myBoolean }}, ${{ env.myIntegerNumber }}, ${{env.myFloatNumber}}, $myHexNumber
       - name: Should I Run1?
-        if: ${{env.shouldRun1}}
+        if: ${{env.shouldRun1 == true}}
         run: echo I''m running!
       - name: Should I Run2?
-        if: ${{env.shouldRun2}}
+        if: ${{env.shouldRun2 == true}}
         run: echo "I'm running!"
       
       
