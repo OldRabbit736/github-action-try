@@ -12,6 +12,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      
 #   example-job:
 #     runs-on: ubuntu-latest
 #     steps:
@@ -20,6 +21,7 @@ jobs:
 #         env:
 #           POSTGRES_HOST: postgres
 #           POSTGRES_PORT: 5432
+
   env-job:
     runs-on: ubuntu-latest
     env:
@@ -29,5 +31,12 @@ jobs:
         run: echo $WORKFLOW_ENV, $JOB_ENV, $STEP_ENV
         env:
           STEP_ENV: step-env
+          
+  using-script-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run build script
+        run: ./.github/scripts/build.sh
+        shell: bash
     
       
