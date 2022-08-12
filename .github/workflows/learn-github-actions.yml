@@ -73,11 +73,17 @@ jobs:
       myExponentialNumber: ${{ -2.99e-2 }}
       myString: Mona the Octocat
       myStringInBraces: ${{ 'It''s open source!' }}
+      shouldRun1: true
+      shouldRun2: false
     steps:
       - name: Print env
         run: echo ${{ env.myNull }}, ${{ env.myBoolean }}, ${{ env.myIntegerNumber }}, ${{env.myFloatNumber}}, $myHexNumber
-      
-      
+      - name: Should I Run1?
+        if: ${{shouldRun1}}
+        run: echo I'm running!
+      - name: Should I Run2?
+        if: ${{shouldRun2}}
+        run: echo I'm running!
       
       
       
