@@ -53,6 +53,7 @@ jobs:
           path: output.log
   
   sharing-job-load:
+    needs: sharing-job-save
     runs-on: ubuntu-latest
     name: Download output
     steps:
