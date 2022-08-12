@@ -75,7 +75,7 @@ jobs:
       myStringInBraces: ${{ 'It''s open source!' }}
     steps:
       - name: Print env
-        run: echo ${{ env.myNull }}, ${{ env.myBoolean }}, ${{ myIntegerNumber }}, ${{ myFloatNumber }}
+        run: echo ${{ env.myNull }}, ${{ env.myBoolean }}, ${{ env.myIntegerNumber }}, ${{env.myFloatNumber}}
       
       
       
