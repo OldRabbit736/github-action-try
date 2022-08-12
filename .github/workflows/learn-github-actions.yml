@@ -67,7 +67,7 @@ jobs:
     env:
       myNull: ${{ null }}
       myBoolean: ${{ false }}
-      myIntegerNumber: ${{ 711 }}
+      myIntegerNumber: ${{711}}
       myFloatNumber: ${{ -9.2 }}
       myHexNumber: ${{ 0xff }}
       myExponentialNumber: ${{ -2.99e-2 }}
