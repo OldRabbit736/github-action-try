@@ -26,7 +26,7 @@ jobs:
       JOB_ENV: job-env
     steps:
       - name: Print envs
-        run: echo $WORKFLOW-ENV, $JOB-ENV, $STEP-ENV
+        run: echo $WORKFLOW_ENV, $JOB_ENV, $STEP_ENV
         env:
           STEP_ENV: step-env
     
