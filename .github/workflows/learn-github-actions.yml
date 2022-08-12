@@ -82,7 +82,7 @@ jobs:
         if: ${{env.shouldRun1}}
         run: echo I'm running!
       - name: Should I Run2?
-        if: $shouldRun2
+        if: ${{env.shouldRun2}}
         run: echo I'm running!
       
       
