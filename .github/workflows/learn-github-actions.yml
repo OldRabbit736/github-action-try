@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push]
 env:
-  WORKFLOW-ENV: workflow-env
+  WORKFLOW_ENV: workflow-env
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -23,11 +23,11 @@ jobs:
   env-job:
     runs-on: ubuntu-latest
     env:
-      JOB-ENV: job-env
+      JOB_ENV: job-env
     steps:
       - name: Print envs
         run: echo $WORKFLOW-ENV, $JOB-ENV, $STEP-ENV
         env:
-          STEP-ENV: step-env
+          STEP_ENV: step-env
     
       
